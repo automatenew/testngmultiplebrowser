@@ -47,6 +47,18 @@
 			<version>3.6.1</version>
 			<scope>test</scope>
 		</dependency>
+				<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports-cucumber4-adapter</artifactId>
+			<version>1.0.8</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}\src\test\resources\libs\extentreports-cucumber4-adapter.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -61,8 +73,36 @@
 							<goal>integration-test</goal>
 							<goal>verify</goal>
 						</goals>
+						<configuration>
+							<properties>
+								<property>
+									<name>dataproviderthreadcount</name>
+									<value>2</value>
+								</property>
+							</properties>
+						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+		  	<plugin>
+				<groupId>com.trivago.rta</groupId>
+				<artifactId>cluecumber-report-plugin</artifactId>
+				<version>1.8.0</version>
+				<executions>
+					<execution>
+						<id>report</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>reporting</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sourceJsonReportDirectory>${project.build.directory}/json-cucumber-reports</sourceJsonReportDirectory>
+					<generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
+
+					<expandStepHooks>true</expandStepHooks>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,4 +1,4 @@
-Feature: 
+Feature: Feature1
 
   Scenario: Cucumber
     Given Go to google page

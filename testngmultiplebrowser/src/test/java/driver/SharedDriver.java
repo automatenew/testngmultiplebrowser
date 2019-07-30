@@ -16,7 +16,7 @@ public class SharedDriver {
 
 	public SharedDriver() {
 
-		String browserType = System.getProperty("browser");
+		String browserType = "chrome";//System.getProperty("browser");
 		String hubLink = "remoteIP/wd/hub";
 		
 		if (DriverFactory.getDriver() == null) {
