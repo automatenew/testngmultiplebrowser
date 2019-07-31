@@ -10,14 +10,14 @@ import cucumber.api.java.Before;
 import driver.DriverFactory;
 
 public class Hook {
-	@Before("not @Api")
+	@Before
 	public void before(Scenario scenario) {
 
 		System.out.println("BEFORE HOOK");
 
 	}
 
-	@AfterStep("not @Api")
+	@AfterStep
 	public static void addStepLog(Scenario scenario) {
 		if (DriverFactory.getDriver() != null) {
 			System.out.println("AFTER-STEP");
@@ -37,7 +37,7 @@ public class Hook {
 
 	}
 
-	@After("not @Api")
+	@After
 	public void after(Scenario scenario) {
 
 		System.out.println("AFTER HOOK");
