@@ -1,5 +1,6 @@
 @tag1
-Feature: Feature1
+@tag4
+Feature: Feature7
 
   Scenario: Cucumber
     Given Go to google page

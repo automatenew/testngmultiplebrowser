@@ -1,5 +1,6 @@
+@tag1New
 @tag1
-Feature: feature2
+Feature: feature8
 
   Scenario: Eclipse
     Given Go to google page

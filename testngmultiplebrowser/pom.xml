@@ -77,7 +77,7 @@
 							<properties>
 								<property>
 									<name>dataproviderthreadcount</name>
-									<value>2</value>
+									<value>8</value>
 								</property>
 							</properties>
 						</configuration>

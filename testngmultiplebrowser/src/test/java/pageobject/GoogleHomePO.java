@@ -27,6 +27,7 @@ public class GoogleHomePO extends LoadableComponent<GoogleHomePO>{
 
 	public GoogleSearchPO performSearch(String search) {
 		searchTextBox.sendKeys(search);
+		
 		//Intermittent error - To get rid of suggestion dropdown so search button can be found.
 		//googleImage.click();
 		Actions action = new Actions(DriverFactory.getDriver());
