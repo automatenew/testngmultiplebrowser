@@ -1,0 +1,3 @@
+file:src/test/resources/features/feat4.feature:4
+file:src/test/resources/features/feat2.feature:4
+file:src/test/resources/features/feat7.feature:9
