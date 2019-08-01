@@ -7,6 +7,7 @@ import cucumber.api.CucumberOptions;
                  plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", 
                 		 "json:target/json-cucumber-reports/cukejson.json",
                 		 "testng:target/testng-cucumber-reports/cuketestng.xml",
+                		 "pretty:target/STDOUT.out",
                 		 "rerun:rerunTC/rerun.txt"},
                  features = "src/test/resources/features/")
                  //Rerun the feature file by placing "@rerunTC/rerun.txt" or "src/test/resources/features/"
