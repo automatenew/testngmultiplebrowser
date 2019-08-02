@@ -8,6 +8,7 @@ import cucumber.api.CucumberOptions;
                 		 "json:target/json-cucumber-reports/cukejson.json",
                 		 "testng:target/testng-cucumber-reports/cuketestng.xml",
                 		 "pretty:target/STDOUT.out",
+                		 "timeline:target/timeline-result",
                 		 "rerun:rerunTC/rerun.txt"},
                  features = "src/test/resources/features/")
                  //Rerun the feature file by placing "@rerunTC/rerun.txt" or "src/test/resources/features/"
