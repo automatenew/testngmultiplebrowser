@@ -1,0 +1,28 @@
+2019-08-02 16:29:55,324 ERROR [WebConnector:86] ERROR[Ljava.lang.StackTraceElement;@1855d834 
+2019-08-02 16:29:57,835 ERROR [WebConnector:86] ERROR[Ljava.lang.StackTraceElement;@e4ccd0a 
+2019-08-02 16:29:59,209 ERROR [WebConnector:86] ERROR[Ljava.lang.StackTraceElement;@7cc61c71 
+2019-08-02 16:35:23,915 ERROR [WebConnector:86] ERRORnull 
+2019-08-02 16:35:26,434 ERROR [WebConnector:86] ERRORnull 
+2019-08-02 16:35:29,759 ERROR [WebConnector:86] ERRORnull 
+2019-08-02 16:35:29,967 ERROR [WebConnector:86] ERRORnull 
+2019-08-02 16:42:23,012 ERROR [WebConnector:86] ERRORnull 
+2019-08-02 16:42:23,032 ERROR [WebConnector:88] ERROR getCause()null 
+2019-08-02 16:42:23,033 ERROR [WebConnector:89] ERROR getCause()[Ljava.lang.StackTraceElement;@daa2dc 
+2019-08-02 16:42:30,592 ERROR [WebConnector:86] ERRORnull 
+2019-08-02 16:42:30,592 ERROR [WebConnector:88] ERROR getCause()null 
+2019-08-02 16:42:30,593 ERROR [WebConnector:89] ERROR getCause()[Ljava.lang.StackTraceElement;@73ae8d6 
+2019-08-05 11:01:20,947 ERROR [WebConnector:86] ERRORnull 
+2019-08-05 11:01:20,949 ERROR [WebConnector:88] ERROR getCause()null 
+2019-08-05 11:01:20,949 ERROR [WebConnector:89] ERROR getCause()[Ljava.lang.StackTraceElement;@3ee6b158 
+2019-08-05 11:01:33,032 ERROR [WebConnector:86] ERRORnull 
+2019-08-05 11:01:33,033 ERROR [WebConnector:88] ERROR getCause()null 
+2019-08-05 11:01:33,033 ERROR [WebConnector:89] ERROR getCause()[Ljava.lang.StackTraceElement;@1a7c4227 
+2019-08-05 11:01:40,375 ERROR [WebConnector:86] ERRORnull 
+2019-08-05 11:01:40,376 ERROR [WebConnector:88] ERROR getCause()null 
+2019-08-05 11:01:40,376 ERROR [WebConnector:89] ERROR getCause()[Ljava.lang.StackTraceElement;@4982af75 
+2019-08-06 09:38:19,337 ERROR [WebConnector:86] ERRORnull 
+2019-08-06 09:38:19,340 ERROR [WebConnector:88] ERROR getCause()null 
+2019-08-06 09:38:19,340 ERROR [WebConnector:89] ERROR getCause()[Ljava.lang.StackTraceElement;@68923664 
+2019-08-06 09:38:20,981 ERROR [WebConnector:86] ERRORnull 
+2019-08-06 09:38:20,982 ERROR [WebConnector:88] ERROR getCause()null 
+2019-08-06 09:38:20,982 ERROR [WebConnector:89] ERROR getCause()[Ljava.lang.StackTraceElement;@52755389 

@@ -5,7 +5,7 @@
 
     <appender name="fileAppender" class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="INFO" />
-        <param name="File" value="C:/Users/jogpa/Downloads/PegaBDDFramework/logs/log_${logFileDate}.log"/>
+        <param name="File" value="logs/log_${logFileDate}.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d %-5p [%c{1}:%L] %m %n" />
         </layout>
@@ -13,7 +13,14 @@
 
     <appender name="fileAppenderError" class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="ERROR" />
-        <param name="File" value="C:/Users/jogpa/Downloads/PegaBDDFramework/logs/errors_${logFileDate}.log"/>
+        <param name="File" value="logs/errors_${logFileDate}.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%c{1}:%L] %m %n" />
+        </layout>
+    </appender>
+        <appender name="fileAppenderConsole" class="org.apache.log4j.ConsoleAppender">
+        <param name="Threshold" value="debug" />
+        <param name="File" value="logs/console_${logFileDate}.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d %-5p [%c{1}:%L] %m %n" />
         </layout>
@@ -23,6 +30,7 @@
         <priority value="INFO" />
         <appender-ref ref="fileAppender"/>
         <appender-ref ref="fileAppenderError"/>
+        <appender-ref ref="fileAppenderConsole"/>
     </root>
 
 </log4j:configuration>

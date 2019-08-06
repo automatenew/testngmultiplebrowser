@@ -64,6 +64,12 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}\src\test\resources\libs\extentreports-cucumber4-adapter.jar</systemPath>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -82,7 +88,7 @@
 							<properties>
 								<property>
 									<name>dataproviderthreadcount</name>
-									<value>4</value>
+									<value>8</value>
 								</property>
 							</properties>
 						</configuration>

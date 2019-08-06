@@ -13,5 +13,5 @@ import cucumber.api.CucumberOptions;
                  features = "src/test/resources/features/")
                  //Rerun the feature file by placing "@rerunTC/rerun.txt" or "src/test/resources/features/"
 public class RunnerIT extends AbstractTestNGCucumberParallelTests {
-
+ 
 }

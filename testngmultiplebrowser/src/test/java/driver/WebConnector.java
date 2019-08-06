@@ -83,6 +83,10 @@ public class WebConnector {
 		{
 			e.printStackTrace();
 			//reportFailure("Element not found "+objectKey);
+			log.error("ERROR"+e.getLocalizedMessage());
+			log.info(e.getLocalizedMessage());
+			log.error("ERROR getCause()"+e.getCause());
+			log.error("ERROR getCause()"+e.getStackTrace());
 		}
 			
 	}
