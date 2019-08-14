@@ -24,7 +24,8 @@ public class WebConnector {
 	public WebConnector(SharedDriver driver) {
 		//name="A";
 		if(prop==null) {
-			
+			System.out.println("WebConnector---->Constructor--Thread ID = " + Thread.currentThread().getId());
+			System.out.println("WebConnector---->Constructor--Thread NAME = "+Thread.currentThread().getName());
 			try {
 				prop= new Properties();
 				FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\setUp.properties");
@@ -50,10 +51,16 @@ public class WebConnector {
 	
 	public void navigate() {
 		DriverFactory.getDriver().get(prop.getProperty("url"));	
+		System.out.println("WebConnector---navigate()----Thread ID = " + Thread.currentThread().getId());
+		System.out.println("WebConnector---navigate()Thread NAME = "+Thread.currentThread().getName());
+		System.out.println("WebConnector---navigate()--Hashcode of webDriver instance = " + DriverFactory.getDriver().hashCode());
 	}
 	
 	///Pega Methods
 	public void clickElement(String fieldName,String objectKey) {
+		System.out.println("WebConnector---navigate()Thread ID = " + Thread.currentThread().getId());
+		System.out.println("WebConnector---navigate()Thread NAME = "+Thread.currentThread().getName());
+		System.out.println("WebConnector---navigate()-->Hashcode of webDriver instance = " + DriverFactory.getDriver().hashCode());
 		try
 		{
 			try
@@ -83,16 +90,15 @@ public class WebConnector {
 		{
 			e.printStackTrace();
 			//reportFailure("Element not found "+objectKey);
-			log.error("ERROR"+e.getLocalizedMessage());
-			log.info(e.getLocalizedMessage());
-			log.error("ERROR getCause()"+e.getCause());
-			log.error("ERROR getCause()"+e.getStackTrace());
 		}
 			
 	}
 	
 	public void appendStrToFile(String fileName, String str) 
 	{ 
+		System.out.println("Thread ID = " + Thread.currentThread().getId());
+		System.out.println("Thread NAME = "+Thread.currentThread().getName());
+		System.out.println("Hashcode of webDriver instance = " + DriverFactory.getDriver().hashCode());
 		try { 
 		
 			// Open given file in append mode. 
@@ -132,6 +138,9 @@ public class WebConnector {
 		}
 	}
 	public void select(String fieldName,String objectKey,String data) {
+		System.out.println("Thread ID = " + Thread.currentThread().getId());
+		System.out.println("Thread NAME = "+Thread.currentThread().getName());
+		System.out.println("Hashcode of webDriver instance = " + DriverFactory.getDriver().hashCode());
 		if(getObject(fieldName,objectKey).isDisplayed())
 		{
 			Select s= new Select(getObject(fieldName,objectKey));
@@ -146,6 +155,9 @@ public class WebConnector {
 	}
 	
 	public void clear(String fieldName,String objectKey) {
+		System.out.println("Thread ID = " + Thread.currentThread().getId());
+		System.out.println("Thread NAME = "+Thread.currentThread().getName());
+		System.out.println("Hashcode of webDriver instance = " + DriverFactory.getDriver().hashCode());
 		if(getObject(fieldName,objectKey).isDisplayed())
 		{
 			getObject(fieldName,objectKey).clear();
@@ -156,6 +168,9 @@ public class WebConnector {
 	}
 	
 	public String getAttributeValue(String fieldName,String objectKey,String attributeName) {
+		System.out.println("Thread ID = " + Thread.currentThread().getId());
+		System.out.println("Thread NAME = "+Thread.currentThread().getName());
+		System.out.println("Hashcode of webDriver instance = " + DriverFactory.getDriver().hashCode());
 		String value="";
 		try
 		{

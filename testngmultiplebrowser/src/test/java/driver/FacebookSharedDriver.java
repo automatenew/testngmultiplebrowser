@@ -12,42 +12,44 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SharedDriver {
+public class FacebookSharedDriver {
 
-	public SharedDriver() {
+	public FacebookSharedDriver() {
 
 		String browserType = "chrome";//System.getProperty("browser");
-		String hubLink = "http://172.21.4.160:4444/wd/hub";
+		String hubLink = "remoteIP/wd/hub";
 		
-		if (DriverFactory.getDriver() == null) {
-			WebDriver driver = null;
+		if (FacebookDriverFactory.getFacebookDriver() == null) {
+			WebDriver gmailDriver = null;
 			switch (browserType) {
 			case "chrome":
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+				gmailDriver = new ChromeDriver();
 				break;
 			case "firefox":
 				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
+				gmailDriver = new FirefoxDriver();
 				break;
 			case "remoteChrome":
 				try {
-					driver = new RemoteWebDriver(new URL(hubLink), getChromeCapabilities());
+					gmailDriver = new RemoteWebDriver(new URL(hubLink), getChromeCapabilities());
 				} catch (MalformedURLException e) {
 					e.printStackTrace();
 				}
                 break;
 			}
-			driver.manage().window().maximize();
-			DriverFactory.addDriver(driver);
+			gmailDriver.manage().window().maximize();
+			FacebookDriverFactory.addFacebookDriver(gmailDriver);
+			System.out.println("FacebookSharedDriver()---->Thread ID = " + Thread.currentThread().getId());
+			System.out.println("FacebookSharedDriver()---->Thread NAME = "+Thread.currentThread().getName());
+			
 		}
 	}
 	
 	private DesiredCapabilities getChromeCapabilities() {
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         capabilities.setBrowserName("chrome");
-        capabilities.setPlatform(Platform.WINDOWS);
-        capabilities.setVersion("75.0.3770.142");
+        capabilities.setPlatform(Platform.WIN8);
 
         return capabilities;
     }

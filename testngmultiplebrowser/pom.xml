@@ -57,6 +57,12 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports-cucumber4-adapter</artifactId>
@@ -88,7 +94,7 @@
 							<properties>
 								<property>
 									<name>dataproviderthreadcount</name>
-									<value>8</value>
+									<value>2</value>
 								</property>
 							</properties>
 						</configuration>
@@ -111,7 +117,6 @@
 				<configuration>
 					<sourceJsonReportDirectory>${project.build.directory}/json-cucumber-reports</sourceJsonReportDirectory>
 					<generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
-
 					<expandStepHooks>true</expandStepHooks>
 				</configuration>
 			</plugin>

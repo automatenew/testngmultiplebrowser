@@ -20,7 +20,8 @@ public class GoogleHomePO extends LoadableComponent<GoogleHomePO>{
 
 	public GoogleSearchPO performSearch(String search) {
 		con.input("searchTextBox_css", searchTextBox_css, search);
-		
+		System.out.println("GoogleHomePO---->--Thread ID = " + Thread.currentThread().getId());
+		System.out.println("GoogleHomePO---->--Thread NAME = "+Thread.currentThread().getName());
 		//Intermittent error - To get rid of suggestion dropdown so search button can be found.
 		//googleImage.click();
 		Actions action = new Actions(DriverFactory.getDriver());

@@ -15,7 +15,8 @@ public class GoogleSearchPO extends LoadableComponent<GoogleSearchPO>{
 	}
 	
 	public int searchResultCount() {
-		
+		System.out.println("GoogleSearchPO---->searchResultCount--Thread ID = " + Thread.currentThread().getId());
+		System.out.println("GoogleSearchPO---->searchResultCount--Thread NAME = "+Thread.currentThread().getName());
 		int count=DriverFactory.getDriver().findElements(By.cssSelector(searchResult_css)).size();
 		return count + 1;
 	}

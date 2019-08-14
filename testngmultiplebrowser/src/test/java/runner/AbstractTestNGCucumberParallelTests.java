@@ -9,6 +9,7 @@ public abstract class AbstractTestNGCucumberParallelTests extends AbstractTestNG
 	@Override
 	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
+		System.out.println("AbstractTestNGCucumberParallelTests--->Scenarios");
 		return super.scenarios();
 	}
 
